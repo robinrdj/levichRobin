@@ -1,0 +1,158 @@
+.card {
+  width: 100%;
+  min-width: 240px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #204999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  box-sizing: border-box;
+  height: 432px;
+  padding: 16px;
+    font-family: 'Inter';
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  border: 1px solid gray;
+}
+
+
+
+.menu-icon {
+  font-size: 18px;
+  color: #9ca3af;
+  cursor: pointer;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e5e7eb;
+  margin: 12px 0;
+}
+
+.progress-section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid green;
+}
+
+.progress-wrapper {
+  width: 100%;
+  max-width: 230px;
+  height: 160px; 
+  overflow: hidden; 
+  margin: 0 auto; 
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border: 1px solid green;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+.progress-semiCircle {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.progress-value {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.growth {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #10b981;
+  gap: 5px;
+}
+
+.footer-text {
+  margin-top: 16px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: #181d27;
+  margin-bottom: 5px
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  color: #535862;
+  font-size: 12px;
+  font-weight: 400;
+
+}
+
+.limit-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 6px;
+  color: #181D27;
+}
+
+.limit-subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  color: #535862;
+  margin: 0;
+  line-height: 20px;
+  white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.upgrade-btn {
+  background-color: #ffffff;
+  border: 1px solid #d5d7da;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 14px;
+  color: #414651;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  transition: background 0.2s;
+  box-shadow: 0px -2px 0px 0px #0a0d120d inset;
+  margin-bottom: 0px;
+  margin-top: 16px;
+}
+
+.upgrade-btn:hover {
+  background-color: #f3f4f6;
+}
+
+@media (max-width: 840px) {
+  .card {
+    min-width: 430px;
+    max-width: 430px;
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid brown;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+    font-family: "Segoe UI", sans-serif;
+    box-sizing: border-box;
+    height: 400px;
+    height: 100%;
+  }
+}

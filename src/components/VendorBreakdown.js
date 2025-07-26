@@ -1,0 +1,127 @@
+import React from "react";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+  Label,
+} from "recharts";
+import useIsMobile from "./useIsMobile";
+import vendorLogo from "../assets/vendorLogo.png";
+import "./VendorBreakdown.css";
+
+const data = [
+  { month: "Jan", low: 25, medium: 30, high: 25 },
+  { month: "Feb", low: 30, medium: 35, high: 25 },
+  { month: "Mar", low: 22, medium: 28, high: 20 },
+  { month: "Apr", low: 28, medium: 30, high: 22 },
+  { month: "May", low: 30, medium: 30, high: 20 },
+  { month: "Jun", low: 32, medium: 30, high: 25 },
+  { month: "Jul", low: 28, medium: 32, high: 20 },
+  { month: "Aug", low: 34, medium: 30, high: 22 },
+  { month: "Sep", low: 30, medium: 28, high: 22 },
+  { month: "Oct", low: 32, medium: 30, high: 25 },
+  { month: "Nov", low: 35, medium: 30, high: 28 },
+  { month: "Dec", low: 32, medium: 28, high: 25 },
+];
+
+const VendorBreakdown = () => {
+  const isMobile = useIsMobile();
+  const barSize = isMobile ? 20 : 30;
+
+  return (
+    <div className="vendor-card">
+      <div
+        className="vendor-header"
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "flex-start",
+        }}
+      >
+        <div>
+          <img src={vendorLogo} alt="Vendor Logo" className="vendorImage" />
+        </div>
+        <div>
+          <h4>Vendor breakdown</h4>
+          <p>Keep track of vendors and their security ratings.</p>
+        </div>
+      </div>
+
+      <hr className="vendor-divider" />
+
+      <div className="vendor-chart">
+        <ResponsiveContainer width="100%" height={250}>
+          <BarChart data={data}>
+            <CartesianGrid strokeDasharray="#e5e7eb" vertical={false} />
+            <XAxis
+              dataKey="month"
+              tick={{
+                fontWeight: 400,
+                fontSize: 12,
+                fill:"#535862"
+              }}
+            >
+              <Label
+                value="Month"
+                offset={-5}
+                position="insideBottom"
+                style={{
+                  fontSize: 12,
+                  fill: "#535862",
+                  fontWeight: 500,
+                }}
+              />
+            </XAxis>
+            <YAxis>
+              <Label
+                value="Security rating"
+                angle={-90}
+                position="insideLeft"
+                style={{
+                  textAnchor: "middle",
+                  fontSize: 13,
+                  fill: "#535862",
+                  fontWeight: 500,
+                }}
+              />
+            </YAxis>
+            <Tooltip />
+            <Bar
+              dataKey="low"
+              stackId="a"
+              fill="#5B21B6"
+              barSize={barSize}
+              radius={[2, 2, 0, 0]}
+            />
+            <Bar
+              dataKey="medium"
+              stackId="a"
+              fill="#9e77ed"
+              barSize={barSize}
+              radius={[4, 4, 0, 0]}
+            />
+            <Bar
+              dataKey="high"
+              stackId="a"
+              fill="#E5E7EB"
+              barSize={barSize}
+              radius={[8, 8, 0, 0]}
+            />
+          </BarChart>
+        </ResponsiveContainer>
+      </div>
+
+      <hr className="vendor-divider" />
+
+      <div className="vendor-footer">
+        <button>View full report</button>
+      </div>
+    </div>
+  );
+};
+
+export default VendorBreakdown;

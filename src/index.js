@@ -1,13 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./components/App";
+import Sidebar from "./components/Sidebar";
+import reportWebVitals from "./reportWebVitals";
+import TopNavBar from "./components/TopNavBar";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <div>
+      <div className="topbar-container">
+        <TopNavBar />
+      </div>
+
+      <div className="sidebar-container">
+        <Sidebar />
+      </div>
+      <div>
+        <App />
+      </div>
+    </div>
   </React.StrictMode>
 );
 

@@ -551,9 +551,9 @@ tr.row-divider {
     content: "";
     position: absolute;
     left: 4px;
-    top: 6px;
+    top: 7px;
     width: 6px;
-    height: 2px;
+    height: 1px;
     background: white;
     border-radius: 2px;
     transform: rotate(180deg);

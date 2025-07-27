@@ -4,9 +4,8 @@
   border-radius: 12px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   /* margin: 16px; */
-  border: 1px solid blue;
+  border: 1px solid gray;
   width: 100%;
-
 }
 
 .action-header {
@@ -33,7 +32,7 @@
   font-weight: 400;
   margin: 0px;
   margin-top: 4px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .header-actions {
@@ -112,7 +111,7 @@
 .view-btn {
   background: #fff;
   color: gray;
-  padding: 6px 18px;
+  padding: 6px 14px;
   font-size: 14px;
   cursor: pointer;
   outline: none;
@@ -149,7 +148,6 @@
   width: 100%;
   margin-top: 1rem;
   border-collapse: collapse;
-
 }
 
 .vendor-table th,
@@ -238,7 +236,6 @@
   border-top: 1px solid #eee;
 }
 
-
 /* The base custom-checkbox styles remain as above */
 
 .custom-checkbox.checkbox-minus {
@@ -259,11 +256,8 @@
   transform: rotate(180deg);
 }
 
-
 .custom-checkbox.checkbox-minus:checked {
-
 }
-
 
 .pagination {
   display: flex;
@@ -331,18 +325,17 @@
   gap: 6px;
 }
 
-
 .badge-dot {
   display: inline-block;
-  width: 8px; 
+  width: 8px;
   height: 8px;
   background: #17c964;
   border-radius: 50%;
   margin-right: 2px;
 }
-.badge-dot-red{
+.badge-dot-red {
   display: inline-block;
-  width: 8px;   
+  width: 8px;
   height: 8px;
   background: black;
   border-radius: 50%;
@@ -494,4 +487,3 @@ tr.row-divider {
   background-color: #fafafa;
   height: 50px;
 }
-

@@ -13,7 +13,6 @@ root.render(
       <div className="topbar-container">
         <TopNavBar />
       </div>
-
       <div className="sidebar-container">
         <Sidebar />
       </div>

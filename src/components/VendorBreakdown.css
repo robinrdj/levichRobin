@@ -13,8 +13,8 @@
 
 .vendor-header {
   display: flex;
-  align-items: center;      
-  gap: 8px;                 
+  align-items: center;
+  gap: 8px;
   margin-bottom: 8px;
   border: 1px solid green;
 }
@@ -32,9 +32,8 @@
   margin: 0;
   font-size: 18px;
   line-height: 28px;
-   font-weight: 600;
-   color: #181D27;
-   
+  font-weight: 600;
+  color: #181d27;
 }
 
 .vendor-header p {
@@ -64,21 +63,25 @@
 }
 
 .vendor-footer button {
-  background-color: #FFFFFF;
-  border: 1px solid #D5D7DA;
+  background-color: #ffffff;
+  border: 1px solid #d5d7da;
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
-  color:#414651;
+  color: #414651;
   font-weight: 500;
- box-shadow: 0px -2px 0px 0px #0A0D120D inset;
+  box-shadow: 0px -2px 0px 0px #0a0d120d inset;
+}
+.vendor-footer button:hover {
+  background-color: #f3f4f6;
 }
 
 @media (max-width: 840px) {
   .vendor-card {
-    min-width: 400px;
-    max-width: 400px;
+     min-width: 340px;
+    max-width: 300px;
+
   }
   .vendor-chart {
     height: 300px;

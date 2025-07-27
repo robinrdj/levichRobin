@@ -1,6 +1,7 @@
 import React from "react";
 import "./TopNavBar.css";
 import logo from "../assets/Logomark.png";
+import topbarIcon from "../assets/topbarCollapse.png";
 
 
 const TopNavBar = () => {
@@ -11,9 +12,10 @@ const TopNavBar = () => {
         <span className="logo-text">Untitled UI</span>
       </div>
       <div className="menu-icon">
+        <img src={topbarIcon} alt="topbarIcon" />
+        {/* <div className="bar" />
         <div className="bar" />
-        <div className="bar" />
-        <div className="bar" />
+        <div className="bar" /> */}
       </div>
     </div>
   );

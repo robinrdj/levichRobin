@@ -32,10 +32,12 @@
 
 @media (max-width: 840px) {
   .header-container {
-    max-width: 400px;
+    /* max-width: 400px; */
     margin: auto;
     border: 1px solid green;
     padding: 16px;
+    max-width: 300px;
+    min-width: 340px;
   }
 
   .vendor-cards-container {

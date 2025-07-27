@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaSearch, FaFilter, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "./VendorTable.css";
 import { FiEdit2 } from "react-icons/fi";
@@ -36,7 +36,7 @@ const vendors = [
     icon: "/icons/stack3d.svg",
     rating: 72,
     trend: 4,
-     trendNature: "negative",
+    trendNature: "negative",
     lastAccessed: "20 Jan 2025",
     categories: ["Active", "Business data", "Admin", "+4"],
     selected: true,
@@ -48,7 +48,7 @@ const vendors = [
     icon: "/icons/warp.svg",
     rating: 78,
     trend: 6,
-     trendNature: "positive",
+    trendNature: "positive",
     lastAccessed: "24 Jan 2025",
     categories: ["Active", "Customer data", "Financials"],
     selected: true,
@@ -60,7 +60,7 @@ const vendors = [
     icon: "/icons/cloudwatch.svg",
     rating: 38,
     trend: 8,
-     trendNature: "positive",
+    trendNature: "positive",
     lastAccessed: "26 Jan 2025",
     categories: ["Active", "Database access", "Admin"],
     selected: false,
@@ -72,7 +72,7 @@ const vendors = [
     icon: "/icons/contrastai.svg",
     rating: 42,
     trend: 1,
-     trendNature: "negative",
+    trendNature: "negative",
     lastAccessed: "18 Jan 2025",
     categories: ["Active", "Salesforce", "Admin", "+4"],
     selected: false,
@@ -84,7 +84,7 @@ const vendors = [
     icon: "/icons/convergence.svg",
     rating: 66,
     trend: 6,
-     trendNature: "negative",
+    trendNature: "negative",
     lastAccessed: "28 Jan 2025",
     categories: ["Active", "Business data", "Admin", "+4"],
     selected: true,
@@ -96,7 +96,7 @@ const vendors = [
     icon: "/icons/sisyphus.svg",
     rating: 91,
     trend: 2,
-     trendNature: "positive",
+    trendNature: "positive",
     lastAccessed: "16 Jan 2025",
     categories: ["Inactive", "Customer data", "Financials"],
     selected: true,
@@ -117,17 +117,17 @@ const getStatusInfo = (categories) => {
 
 const VendorTable = () => {
   const isMobile = useIsMobile();
+  const [headerChecked, setHeaderChecked] = useState(false);
+
   return (
     <div className="vendor-container">
       {/* Header */}
       <div className="vendor-header">
         <div>
-        <h2>
-          Vendor movements <span className="badge">240 vendors</span>
-        </h2>
-        <p>
-          Keep track of vendor and their security ratings
-        </p>
+          <h2>
+            Vendor movements <span className="badge">240 vendors</span>
+          </h2>
+          <p>Keep track of vendor and their security ratings</p>
         </div>
 
         <div className="header-actions">
@@ -140,7 +140,7 @@ const VendorTable = () => {
           <button className="btn primary-btn">+ Add vendor</button>
         </div>
       </div>
-
+      <div className="row-rule" />
       {/* Controls */}
       <div className="vendor-controls">
         <div className="left-controls">
@@ -152,14 +152,18 @@ const VendorTable = () => {
         </div>
         <div className="right-controls">
           <div className="search-box">
-            <FaSearch style={{color:"gray",}}/>
+            <FaSearch style={{ color: "gray" }} />
             <input type="text" placeholder="Search" />
             <span className="shortcut-icon">
-              <img src={shortcutIcon} alt="shortcut" className="shortcut-icon-img"/>
+              <img
+                src={shortcutIcon}
+                alt="shortcut"
+                className="shortcut-icon-img"
+              />
             </span>
           </div>
           <button className="filter-btn">
-            {isMobile? <img src={filterLines} alt="filterLines" />:"Filters"}
+            {isMobile ? <img src={filterLines} alt="filterLines" /> : "Filters"}
             {/* <FaFilter />  */}
           </button>
         </div>
@@ -171,11 +175,27 @@ const VendorTable = () => {
           <thead className="table-header">
             <tr>
               <th>
-                <input type="checkbox" className="custom-checkbox" />
+                <input
+                  type="checkbox"
+                  className={`custom-checkbox ${
+                    headerChecked ? "checkbox-minus" : ""
+                  }`}
+                  checked={headerChecked}
+                  onChange={() => setHeaderChecked(!headerChecked)}
+                />
               </th>
-              <th>Vendor</th>
+              <th>
+                <div
+                  style={{ display: "flex", alignItems: "center", gap: "4px" }}
+                >
+                  <div>Vendor </div>
+                  <div>
+                    <FaArrowDown />
+                  </div>
+                </div>
+              </th>
               <th>Rating</th>
-              <th >Last assessed</th>
+              <th>Last assessed</th>
               <th>Categories</th>
               <th></th>
             </tr>
@@ -187,15 +207,14 @@ const VendorTable = () => {
                 vendor.categories
               );
               const showTrend =
-                typeof vendor.trend === "number" && vendor.trend !== 0 && !isMobile;
+                typeof vendor.trend === "number" &&
+                vendor.trend !== 0 &&
+                !isMobile;
               return (
                 <React.Fragment key={index}>
                   <tr className="vendor-row">
                     <td>
-                      <input
-                        type="checkbox"
-                        className="custom-checkbox"
-                      />
+                      <input type="checkbox" className="custom-checkbox" />
                     </td>
                     <td>
                       <div className="vendor-info">
@@ -227,15 +246,28 @@ const VendorTable = () => {
                         {showTrend && (
                           <span
                             className={`trend-badge ${
-                              vendor.trendNature=="positive" ? "trend-up" : "trend-down"
+                              vendor.trendNature == "positive"
+                                ? "trend-up"
+                                : "trend-down"
                             }`}
                           >
-                            <span style={{display:"flex", gap:"4px", alignItems:"center", padding:"2px", fontSize:"12px", fontWeight:"400"}}>
-                            {vendor.trendNature=="positive" ? <FaArrowUp style={{color:"green"}}/> : <FaArrowDown style={{color:"red"}}/>}
-                            {vendor.trend}%
+                            <span
+                              style={{
+                                display: "flex",
+                                gap: "4px",
+                                alignItems: "center",
+                                padding: "2px",
+                                fontSize: "12px",
+                                fontWeight: "400",
+                              }}
+                            >
+                              {vendor.trendNature == "positive" ? (
+                                <FaArrowUp style={{ color: "green" }} />
+                              ) : (
+                                <FaArrowDown style={{ color: "red" }} />
+                              )}
+                              {vendor.trend}%
                             </span>
-      
-
                           </span>
                         )}
                       </div>
@@ -244,15 +276,33 @@ const VendorTable = () => {
                     <td>
                       <div className="categories-badges">
                         {vendor.categories.map((cat, i) => (
-                          <span key={i} className="badge">
-                            {cat}
+                          <span className="badge">
+                            {cat == "Active" ? (
+                              <span className="badge-dot"></span>
+                            ) : (
+                              ""
+                            )}
+                            {cat == "Inactive" ? (
+                              <span className="badge-dot-red"></span>
+                            ) : (
+                              ""
+                            )}
+                            <span key={i}>{cat}</span>
                           </span>
                         ))}
                       </div>
                     </td>
                     <td className="edit-delete-icons">
-                      <FiEdit2 style={{ marginRight: 10, cursor: "pointer", color:"#A4A7AE" }} />
-                      <RiDeleteBinLine style={{ cursor: "pointer", color:"#A4A7AE"}} />
+                      <FiEdit2
+                        style={{
+                          marginRight: 10,
+                          cursor: "pointer",
+                          color: "#A4A7AE",
+                        }}
+                      />
+                      <RiDeleteBinLine
+                        style={{ cursor: "pointer", color: "#A4A7AE" }}
+                      />
                     </td>
                   </tr>
                   {!isLast && (

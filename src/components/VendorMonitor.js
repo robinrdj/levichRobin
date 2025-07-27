@@ -50,11 +50,11 @@ const VendorMonitor = () => {
             <img
               src={growthIcon}
               alt="Growth"
-              style={{ width: "20px", height: "20px", marginTop: "8px" }}
+              style={{ width: "16px", height: "16px", marginTop: "8px" }}
             />
           </span>
 
-          <span className="growth-value" style={{ fontSize: "18px" }}>
+          <span className="growth-value" style={{ fontSize: "16px" }}>
             {growth}%
           </span>
         </div>

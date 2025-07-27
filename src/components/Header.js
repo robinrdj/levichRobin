@@ -12,7 +12,7 @@ const Header = () => {
       {isMobile?"":<button className="header-search" aria-label="Search">
         <FiSearch />
       </button>}
-      <button className="header-btn"><span header-btn-span><img src={customiseIcon}  alt="customiseIcon" className="customise-icon-img"/><span className="header-btn-text">Customize</span></span></button>
+      <button className="header-btn"><span header-btn-span><img src={customiseIcon}  alt="customiseIcon" className="customise-icon-img"/><span className="header-btn-text" style={{marginLeft:"6px"}}>Customize</span></span></button>
       <button className="header-btn">Export</button>
     </div>
   </div>

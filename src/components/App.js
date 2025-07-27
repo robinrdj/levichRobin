@@ -12,12 +12,8 @@ function App() {
     <div className="app">
       <Header className="header-container" />
       <div className="vendor-cards-container">
-        <div className="vendor-breakdown-container">
-          <VendorBreakdown />
-        </div>
-        <div className="vendor-monitor-container">
-          <VendorMonitor />
-        </div>
+          <VendorBreakdown  className="vendor-breakdown-container"/>
+          <VendorMonitor className="vendor-monitor-container"/>
       </div>
       <div className="vendor-table-container">
         <VendorTableComponent />

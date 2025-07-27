@@ -1,3 +1,4 @@
+// React and icon imports
 import React, { useState } from "react";
 import { FaSearch, FaFilter, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "./VendorTable.css";
@@ -17,6 +18,7 @@ import shortcutIcon from "../assets/shortcut.png";
 import filterLines from "../assets/filterLines.png";
 import useIsMobile from "./useIsMobile";
 
+// Vendor data for table rows
 const vendors = [
   {
     name: "Ephemeral",
@@ -115,13 +117,14 @@ const getStatusInfo = (categories) => {
   };
 };
 
+// Main vendor table component
 const VendorTable = () => {
   const isMobile = useIsMobile();
   const [headerChecked, setHeaderChecked] = useState(false);
 
   return (
     <div className="vendor-container">
-      {/* Header */}
+      {/* Table header section */}
       <div className="action-header">
         <div>
           <h2>
@@ -141,10 +144,11 @@ const VendorTable = () => {
         </div>
       </div>
       <div className="row-rule" />
-      {/* Controls */}
+      {/* Controls for view, search, filter */}
       <div className="vendor-controls">
         <div className="left-controls">
           <div className="view-buttons">
+            {/* View mode buttons */}
             <button className="view-btn active">View all</button>
             <button className="view-btn">Monitored</button>
             <button className="view-btn">Unmonitored</button>
@@ -169,12 +173,12 @@ const VendorTable = () => {
         </div>
       </div>
 
-      {/* Table */}
+      {/* Vendor data table */}
       <div className="table-wrapper">
         <table className="vendor-table">
           <thead className="table-header">
             <tr>
-              <th style={{marginLeft:"20px"}}>
+              <th style={{ marginLeft: "20px" }}>
                 <input
                   type="checkbox"
                   className={`custom-checkbox ${
@@ -182,7 +186,6 @@ const VendorTable = () => {
                   }`}
                   checked={headerChecked}
                   onChange={() => setHeaderChecked(!headerChecked)}
-                  
                 />
               </th>
               <th>
@@ -306,6 +309,7 @@ const VendorTable = () => {
                       />
                     </td>
                   </tr>
+                  {/* Divider row between vendors */}
                   {!isLast && (
                     <tr className="row-divider">
                       <td colSpan={6}>
@@ -321,7 +325,8 @@ const VendorTable = () => {
       </div>
 
       <hr className="divider" />
-      <div style={{margin:"16px"}}>
+      {/* Pagination controls */}
+      <div style={{ margin: "16px" }}>
         <div
           className={isMobile ? "pagination mobile-pagination" : "pagination"}
         >

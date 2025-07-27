@@ -1,5 +1,5 @@
-import React from 'react';
-import './Sidebar.css';
+import React from "react";
+import "./Sidebar.css";
 import {
   FaHome,
   FaChartBar,
@@ -9,8 +9,8 @@ import {
   FaUserFriends,
   FaGlobe,
   FaCog,
-  FaBell
-} from 'react-icons/fa';
+  FaBell,
+} from "react-icons/fa";
 import LogoMark from "../assets/Logomark.png";
 
 import itemHome from "../assets/itemHome.png";
@@ -27,45 +27,41 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="sidebar-top">
         <div className="icon active">
-            <img src={LogoMark} alt="logo"  />
+          <img src={LogoMark} alt="logo" />
           {/* <FaGlobe /> */}
         </div>
         <div className="icon">
-          <img src={itemHome} alt="logo"  />
+          <img src={itemHome} alt="logo" />
           {/* <FaHome /> */}
         </div>
-                <div className="icon">
-          <img src={itemStat} alt="logo"  />
+        <div className="icon">
+          <img src={itemStat} alt="logo" />
           {/* <FaUserFriends /> */}
         </div>
-             <div className="icon">
-          <img src={itemBar} alt="logo"  />
+        <div className="icon">
+          <img src={itemBar} alt="logo" />
           {/* <FaClock /> */}
         </div>
         <div className="icon">
-          <img src={itemCheck} alt="logo"  />
+          <img src={itemCheck} alt="logo" />
           {/* <FaEnvelope /> */}
         </div>
         <div className="icon">
-          <img src={itemChart} alt="logo"  />
+          <img src={itemChart} alt="logo" />
           {/* <FaRegWindowRestore /> */}
         </div>
-
-   
-                <div className="icon">
-          <img src={itemContact} alt="logo"  />
+        <div className="icon">
+          <img src={itemContact} alt="logo" />
           {/* <FaChartBar /> */}
         </div>
-
       </div>
-
       <div className="sidebar-bottom">
         <div className="icon">
-          <img src={itemDrive} alt="logo"  />
+          <img src={itemDrive} alt="logo" />
           {/* <FaBell /> */}
         </div>
         <div className="icon">
-          <img src={itemSetting} alt="logo"  />
+          <img src={itemSetting} alt="logo" />
           {/* <FaCog /> */}
         </div>
         <div className="avatar-wrapper">

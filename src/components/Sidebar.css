@@ -1,3 +1,4 @@
+/* Sidebar main container */
 .sidebar {
   width: 3%;
   background: #fff;
@@ -14,6 +15,7 @@
   left: 10px;
 }
 
+/* Top and bottom sections of sidebar */
 .sidebar-top,
 .sidebar-bottom {
   display: flex;
@@ -22,6 +24,7 @@
   align-items: center;
 }
 
+/* Sidebar icon styles */
 .icon {
   width: 30px;
   height: 30px;
@@ -34,22 +37,26 @@
   cursor: pointer;
 }
 
+/* Icon hover effect */
 .icon:hover {
   background: #f3f4f6;
 }
 
+/* Active icon style */
 .icon.active {
   background: rgba(123, 97, 255, 0.15);
   color: #7b61ff;
   width: 90%;
 }
 
+/* Avatar wrapper for user image */
 .avatar-wrapper {
   position: relative;
   width: 80%;
   height: 80%;
 }
 
+/* Avatar image */
 .avatar {
   width: 90%;
   height: 90%;
@@ -57,6 +64,7 @@
   object-fit: cover;
 }
 
+/* Status dot for avatar */
 .status-dot {
   position: absolute;
   bottom: 0;

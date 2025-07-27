@@ -1,3 +1,4 @@
+/* Top navigation bar container */
 .top-navbar {
   display: flex;
   justify-content: space-between;
@@ -7,12 +8,14 @@
   border-bottom: 1px solid #e5e7eb;
 }
 
+/* Logo section styles */
 .logo-section {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
+/* Logo image */
 .logo-icon {
   width: 32px;
   height: 32px;
@@ -20,12 +23,14 @@
   object-fit: cover;
 }
 
+/* Logo text */
 .logo-text {
   font-size: 18px;
   font-weight: 600;
   color: #111827;
 }
 
+/* Menu icon container */
 .menu-icon {
   display: flex;
   flex-direction: column;
@@ -34,6 +39,7 @@
   cursor: pointer;
 }
 
+/* Hamburger bar style */
 .bar {
   width: 20px;
   height: 2px;

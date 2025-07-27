@@ -3,7 +3,6 @@ import "./TopNavBar.css";
 import logo from "../assets/Logomark.png";
 import topbarIcon from "../assets/topbarCollapse.png";
 
-
 const TopNavBar = () => {
   return (
     <div className="top-navbar">
@@ -13,9 +12,6 @@ const TopNavBar = () => {
       </div>
       <div className="menu-icon">
         <img src={topbarIcon} alt="topbarIcon" />
-        {/* <div className="bar" />
-        <div className="bar" />
-        <div className="bar" /> */}
       </div>
     </div>
   );

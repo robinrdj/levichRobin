@@ -1,3 +1,4 @@
+// React and chart imports
 import React from "react";
 import {
   BarChart,
@@ -13,6 +14,7 @@ import useIsMobile from "./useIsMobile";
 import vendorLogo from "../assets/vendorLogo.png";
 import "./VendorBreakdown.css";
 
+// Chart data for each month
 const data = [
   { month: "Jan", low: 25, medium: 30, high: 25 },
   { month: "Feb", low: 30, medium: 35, high: 25 },
@@ -28,12 +30,14 @@ const data = [
   { month: "Dec", low: 32, medium: 28, high: 25 },
 ];
 
+// Vendor breakdown card component
 const VendorBreakdown = () => {
   const isMobile = useIsMobile();
   const barSize = isMobile ? 20 : 30;
 
   return (
     <div className="vendor-card">
+      {/* Header with logo and title */}
       <div
         className="vendor-header"
         style={{
@@ -53,6 +57,7 @@ const VendorBreakdown = () => {
 
       <hr className="vendor-divider" />
 
+      {/* Chart section */}
       <div className="vendor-chart">
         <ResponsiveContainer width="100%" height={250}>
           <BarChart data={data}>
@@ -62,7 +67,7 @@ const VendorBreakdown = () => {
               tick={{
                 fontWeight: 400,
                 fontSize: 12,
-                fill:"#535862"
+                fill: "#535862",
               }}
             >
               <Label
@@ -90,6 +95,7 @@ const VendorBreakdown = () => {
               />
             </YAxis>
             <Tooltip />
+            {/* Low, medium, high bars */}
             <Bar
               dataKey="low"
               stackId="a"
@@ -102,7 +108,7 @@ const VendorBreakdown = () => {
               stackId="a"
               fill="#9e77ed"
               barSize={barSize}
-              radius={[4, 4, 0, 0]}
+              radius={[2, 2, 0, 0]}
             />
             <Bar
               dataKey="high"
@@ -114,9 +120,8 @@ const VendorBreakdown = () => {
           </BarChart>
         </ResponsiveContainer>
       </div>
-
       <hr className="vendor-divider" />
-
+      {/* Footer with button */}
       <div className="vendor-footer">
         <button>View full report</button>
       </div>

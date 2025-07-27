@@ -28,30 +28,25 @@
 
 .vendor-table-container {
   /* border: 1px solid gray; */
- padding: 0px;
+  padding: 0px;
 }
 
 @media (max-width: 840px) {
   .header-container {
-    /* max-width: 400px; */
-    margin:0 auto;
-
-    /* border: 1px solid green; */
-    /* padding: 16px; */
+    margin: 0 auto;
     max-width: 300px;
     min-width: 300px;
-     transform: translateX(-16px);
+    transform: translateX(-16px);
   }
 
   .vendor-cards-container {
     flex-direction: column;
     gap: 20px;
     margin: 0 auto;
-     /* border: 1px solid red; */
+    /* border: 1px solid red; */
   }
   .vendor-breakdown-container {
     width: 100%;
-   
   }
   .vendor-monitor-container {
     width: 100%;

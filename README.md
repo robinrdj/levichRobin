@@ -1,5 +1,10 @@
-Deployment Link:
+Deployed in both vercel and netlify.
+<br />
+Deployment Links:
+<br />
 https://levich-robin.vercel.app/
+<br />
+https://levichrobinlevich.netlify.app/
 
 Github link:
 https://github.com/robinrdj/levichRobin.git

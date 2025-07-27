@@ -465,7 +465,6 @@ tr.row-divider {
   height: 50px;
 }
 
-
 /* Responsive styles for mobile screens */
 @media screen and (max-width: 840px) {
   /* Stack controls vertically on mobile */
@@ -546,5 +545,17 @@ tr.row-divider {
   .pagination.mobile-pagination .page-buttons {
     display: none;
   }
-}
 
+  .custom-checkbox.checkbox-minus::after {
+    width: 6px;
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 6px;
+    width: 6px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transform: rotate(180deg);
+  }
+}

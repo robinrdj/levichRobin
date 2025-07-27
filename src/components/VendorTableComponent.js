@@ -1,6 +1,6 @@
 // React and icon imports
 import React, { useState } from "react";
-import { FaSearch, FaFilter, FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaSearch, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import "./VendorTable.css";
 import { FiEdit2 } from "react-icons/fi";
 import { RiDeleteBinLine } from "react-icons/ri";
@@ -106,16 +106,7 @@ const vendors = [
   },
 ];
 
-// Helper to extract status info
-const getStatusInfo = (categories) => {
-  const idx = categories.findIndex((c) => c === "Active" || c === "Inactive");
-  if (idx === -1) return { color: "#ccc", label: "" };
-  const label = categories[idx];
-  return {
-    color: label === "Active" ? "#2ecc40" : "#aaa",
-    label,
-  };
-};
+
 
 // Main vendor table component
 const VendorTable = () => {
@@ -207,9 +198,7 @@ const VendorTable = () => {
           <tbody>
             {vendors.map((vendor, index) => {
               const isLast = index === vendors.length - 1;
-              const { color: statusColor, label: statusLabel } = getStatusInfo(
-                vendor.categories
-              );
+
               const showTrend =
                 typeof vendor.trend === "number" &&
                 vendor.trend !== 0 &&
@@ -250,7 +239,7 @@ const VendorTable = () => {
                         {showTrend && (
                           <span
                             className={`trend-badge ${
-                              vendor.trendNature == "positive"
+                              vendor.trendNature === "positive"
                                 ? "trend-up"
                                 : "trend-down"
                             }`}
@@ -265,7 +254,7 @@ const VendorTable = () => {
                                 fontWeight: "400",
                               }}
                             >
-                              {vendor.trendNature == "positive" ? (
+                              {vendor.trendNature === "positive" ? (
                                 <FaArrowUp style={{ color: "green" }} />
                               ) : (
                                 <FaArrowDown style={{ color: "red" }} />
@@ -281,12 +270,12 @@ const VendorTable = () => {
                       <div className="categories-badges">
                         {vendor.categories.map((cat, i) => (
                           <span className="badge">
-                            {cat == "Active" ? (
+                            {cat === "Active" ? (
                               <span className="badge-dot"></span>
                             ) : (
                               ""
                             )}
-                            {cat == "Inactive" ? (
+                            {cat === "Inactive" ? (
                               <span className="badge-dot-red"></span>
                             ) : (
                               ""

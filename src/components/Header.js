@@ -1,4 +1,3 @@
-import React from "react";
 import "./Header.css";
 import { FiSearch } from "react-icons/fi";
 import customiseIcon from "../assets/customiseIcon.png";

@@ -3,9 +3,7 @@ import React from "react";
 import VendorBreakdown from "./VendorBreakdown";
 import VendorMonitor from "./VendorMonitor";
 import VendorTableComponent from "./VendorTableComponent";
-import Sidebar from "./Sidebar";
 import Header from "./Header";
-import TopNavBar from "./TopNavBar";
 import "./App.css";
 
 

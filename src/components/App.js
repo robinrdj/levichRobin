@@ -16,7 +16,7 @@ function App() {
           <VendorMonitor className="vendor-monitor-container"/>
       </div>
       <div className="vendor-table-container">
-        <VendorTableComponent />
+        <VendorTableComponent  />
       </div>
     </div>
   );

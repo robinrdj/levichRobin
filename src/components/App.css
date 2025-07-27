@@ -14,7 +14,7 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .vendor-breakdown-container {
@@ -28,6 +28,7 @@
 
 .vendor-table-container {
   border: 1px solid gray;
+ padding: 0px;
 }
 
 @media (max-width: 840px) {
@@ -44,10 +45,11 @@
     flex-direction: column;
     gap: 20px;
     margin: 0 auto;
+     border: 1px solid red;
   }
   .vendor-breakdown-container {
     width: 100%;
-    border: 1px solid red;
+   
   }
   .vendor-monitor-container {
     width: 100%;

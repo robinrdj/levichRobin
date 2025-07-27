@@ -1,14 +1,13 @@
 .vendor-card {
   border: 1px solid #e5e7eb;
   border-radius: 8px;
-  padding: 16px;
+  /* padding: 16px; */
   background: #fff;
   display: flex;
   flex-direction: column;
   width: 100%;
   min-width: 400px;
-  height: 400px;
-  max-width: 96%;
+  height: 480px;
 }
 
 .vendor-header {
@@ -17,6 +16,7 @@
   gap: 8px;
   margin-bottom: 8px;
   border: 1px solid green;
+  margin: 16px;
 }
 
 .vendorImage {
@@ -51,15 +51,18 @@
 }
 
 .vendor-chart {
-  width: 100%;
+  /* width: 100%; */
   height: 250px;
+  margin: 16px;
 }
 
 .vendor-footer {
   display: flex;
   justify-content: flex-end;
-  margin-top: 12px;
-  border: 1px solid yellow;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  /* border: 1px solid yellow; */
 }
 
 .vendor-footer button {
@@ -79,17 +82,12 @@
 
 @media (max-width: 840px) {
   .vendor-card {
-     min-width: 340px;
+    min-width: 330px;
     max-width: 300px;
 
   }
   .vendor-chart {
-    height: 300px;
+    height: 250px;
   }
-  .vendor-footer {
-    justify-content: center;
-  }
-  .vendor-footer button {
-    width: 100%;
-  }
+
 }

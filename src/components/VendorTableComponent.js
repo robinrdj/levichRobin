@@ -122,7 +122,7 @@ const VendorTable = () => {
   return (
     <div className="vendor-container">
       {/* Header */}
-      <div className="vendor-header">
+      <div className="action-header">
         <div>
           <h2>
             Vendor movements <span className="badge">240 vendors</span>
@@ -174,7 +174,7 @@ const VendorTable = () => {
         <table className="vendor-table">
           <thead className="table-header">
             <tr>
-              <th>
+              <th style={{marginLeft:"20px"}}>
                 <input
                   type="checkbox"
                   className={`custom-checkbox ${
@@ -182,6 +182,7 @@ const VendorTable = () => {
                   }`}
                   checked={headerChecked}
                   onChange={() => setHeaderChecked(!headerChecked)}
+                  
                 />
               </th>
               <th>
@@ -320,27 +321,30 @@ const VendorTable = () => {
       </div>
 
       <hr className="divider" />
-
-      <div className={isMobile ? "pagination mobile-pagination" : "pagination"}>
-        {isMobile ? (
-          <>
-            <button className="nav-btn">
-              <FaArrowLeft />
-            </button>
-            <div className="page-info">Page 1 of 10</div>
-            <button className="nav-btn">
-              <FaArrowRight />
-            </button>
-          </>
-        ) : (
-          <>
-            <div className="page-info">Page 1 of 10</div>
-            <div className="page-buttons">
-              <button className="nav-btn">Previous</button>
-              <button className="nav-btn">Next</button>
-            </div>
-          </>
-        )}
+      <div style={{margin:"16px"}}>
+        <div
+          className={isMobile ? "pagination mobile-pagination" : "pagination"}
+        >
+          {isMobile ? (
+            <>
+              <button className="nav-btn">
+                <FaArrowLeft />
+              </button>
+              <div className="page-info">Page 1 of 10</div>
+              <button className="nav-btn" style={{ marginRight: "5px" }}>
+                <FaArrowRight />
+              </button>
+            </>
+          ) : (
+            <>
+              <div className="page-info">Page 1 of 10</div>
+              <div className="page-buttons">
+                <button className="nav-btn">Previous</button>
+                <button className="nav-btn">Next</button>
+              </div>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -33,7 +33,7 @@ const data = [
 // Vendor breakdown card component
 const VendorBreakdown = () => {
   const isMobile = useIsMobile();
-  const barSize = isMobile ? 20 : 30;
+  const barSize = isMobile ? 16 : 32;
 
   return (
     <div className="vendor-card">
@@ -99,23 +99,23 @@ const VendorBreakdown = () => {
             <Bar
               dataKey="low"
               stackId="a"
-              fill="#5B21B6"
+              fill="#6941C6"
               barSize={barSize}
-              radius={[2, 2, 0, 0]}
+              radius={isMobile ? [4, 4, 0, 0] : [0, 0, 0, 0]}
             />
             <Bar
               dataKey="medium"
               stackId="a"
-              fill="#9e77ed"
+              fill="#9E77ED"
               barSize={barSize}
-              radius={[2, 2, 0, 0]}
+              radius={isMobile ? [4, 4, 0, 0] : [0, 0, 0, 0]}
             />
             <Bar
               dataKey="high"
               stackId="a"
-              fill="#E5E7EB"
+              fill="#E9EAEB"
               barSize={barSize}
-              radius={[8, 8, 0, 0]}
+              radius={isMobile ? [8, 8, 0, 0] : [2, 2, 0, 0]}
             />
           </BarChart>
         </ResponsiveContainer>

@@ -1,6 +1,6 @@
 /* Vendor breakdown card container */
 .vendor-card {
-  border: 1px solid #e5e7eb;
+  /* border: 1px solid #e5e7eb; */
   border-radius: 8px;
   background: #fff;
   display: flex;
@@ -8,6 +8,8 @@
   width: 100%;
   min-width: 400px;
   height: 480px;
+  border: 1px solid var(--Colors-Border-border-secondary, #e9eaeb);
+  box-shadow: 0px 1px 2px 0px var(--ColorsEffectsShadowsshadow-xs);
 }
 
 /* Header section with logo and title */

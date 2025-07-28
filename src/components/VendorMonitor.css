@@ -4,13 +4,13 @@
   min-width: 240px;
   background: #fff;
   border-radius: 12px;
-  border: 1px solid rgb(227, 227, 227);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  border: 1px solid var(--Colors-Border-border-secondary, #e9eaeb);
   box-sizing: border-box;
   height: 432px;
   font-family: "Inter";
   max-width: 400px;
   height: 480px;
+  box-shadow: 0px 1px 2px 0px var(--ColorsEffectsShadowsshadow-xs);
 }
 
 /* Header section with title and menu icon */
@@ -49,8 +49,8 @@
 /* Progress bar wrapper */
 .progress-wrapper {
   width: 100%;
-  max-width: 260px;
-  height: 190px;
+  max-width: 180px;
+  height: 180px;
   overflow: hidden;
   margin: 0 auto;
   display: flex;
@@ -71,9 +71,9 @@
 
 /* Value inside progress bar */
 .progress-value {
-  font-size: 34px;
+  font-size: 30px;
   font-weight: 600;
-  color: #111827;
+  color: #181d27;
   margin-top: -52px;
 }
 

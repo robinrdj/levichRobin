@@ -41,8 +41,8 @@ const VendorMonitor = () => {
               styles={buildStyles({
                 rotation: 0.75,
                 strokeLinecap: "round",
-                trailColor: "#E5E7EB",
-                pathColor: "#9e77ed",
+                trailColor: "#E9EAEB",
+                pathColor: "#7F56D9",
                 strokeWidth: 38,
               })}
             >
@@ -59,7 +59,7 @@ const VendorMonitor = () => {
             />
           </span>
 
-          <span className="growth-value" style={{ fontSize: "16px" }}>
+          <span className="growth-value" style={{ fontSize: "14px", fontWeight:"500" }}>
             {growth}%
           </span>
         </div>

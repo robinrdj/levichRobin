@@ -199,10 +199,7 @@ const VendorTable = () => {
             {vendors.map((vendor, index) => {
               const isLast = index === vendors.length - 1;
 
-              const showTrend =
-                typeof vendor.trend === "number" &&
-                vendor.trend !== 0 &&
-                !isMobile;
+              const showTrend = !isMobile;
               return (
                 <React.Fragment key={index}>
                   <tr className="vendor-row">
@@ -231,7 +228,7 @@ const VendorTable = () => {
                             className="rating-fill"
                             style={{
                               width: `${vendor.rating}%`,
-                              backgroundColor: "#9e77ed",
+                              backgroundColor: "#7F56D9",
                             }}
                           ></div>
                         </div>
@@ -255,9 +252,9 @@ const VendorTable = () => {
                               }}
                             >
                               {vendor.trendNature === "positive" ? (
-                                <FaArrowUp style={{ color: "green" }} />
+                                <FaArrowUp style={{ color: "#079455" }} />
                               ) : (
-                                <FaArrowDown style={{ color: "red" }} />
+                                <FaArrowDown style={{ color: "#D92D20" }} />
                               )}
                               {vendor.trend}%
                             </span>

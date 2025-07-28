@@ -348,7 +348,7 @@
   font-weight: 500;
   padding: 2px 4px;
   border-radius: 4px;
-  margin-left: 0.5rem;
+  margin-left:0px;
   vertical-align: middle;
   border: 1px solid rgb(193, 193, 193);
   color: #414651;
@@ -364,11 +364,12 @@
 /* Green dot for badge */
 .badge-dot {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background: #17b26a;
   border-radius: 50%;
   margin-right: 2px;
+  margin-bottom: 2px;
 }
 /* Black dot for badge */
 .badge-dot-red {
@@ -431,23 +432,27 @@ tr.row-divider {
 
 /* Extra vertical padding for table cells */
 .vendor-table tr.vendor-row > td {
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   /* background-color: green; */
 }
 
 /* Shortcut icon styles */
 .shortcut-icon {
   border: 1px solid rgb(206, 206, 206);
-  padding: 2px;
-  border-radius: 2px;
-  width: 18px;
-  height: 18px;
+  padding: 1px;
+  border-radius: 4px;
+  width: 24px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Shortcut icon image */
 .shortcut-icon-img {
-  height: 9px;
+  height: 8px;
   object-fit: contain;
 }
 
@@ -465,6 +470,7 @@ tr.row-divider {
   font-size: 12px;
   background-color: #fafafa;
   height: 50px;
+  border-bottom: 1px solid var(--Colors-Border-border-secondary, #e9eaeb);
 }
 /* .mobile-nav-button {
   display: none;
@@ -548,7 +554,12 @@ tr.row-divider {
 .filters-span {
   display: block;
 }
-
+.above-footer-buttons {
+  display: none;
+  margin-top: 18px;
+  width: 90%;
+  margin-left: 5%;
+}
 /* Responsive styles for mobile screens */
 @media screen and (max-width: 840px) {
   /* Stack controls vertically on mobile */
@@ -666,5 +677,15 @@ tr.row-divider {
   }
   .filters-span {
     display: none;
+  }
+  .vendor-container {
+    border: none;
+    border-radius: 0px;
+  }
+  .below-import-button {
+    display: none;
+  }
+  .above-footer-buttons {
+    display: block;
   }
 }

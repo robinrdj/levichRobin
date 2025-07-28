@@ -132,7 +132,7 @@ const VendorTable = () => {
           <button className="btn primary-btn">+ Add vendor</button>
         </div>
       </div>
-      <div className="row-rule" />
+      <div className="row-rule below-import-button" />
       {/* Controls for view, search, filter */}
       <div className="vendor-controls">
         <div className="left-controls">
@@ -152,11 +152,17 @@ const VendorTable = () => {
                 src={shortcutIcon}
                 alt="shortcut"
                 className="shortcut-icon-img"
+                
               />
             </span>
           </div>
           <button className="filter-btn">
-            <img src={filterLines} alt="filterLines"  className="filters-image"/><span className="filters-span">Filters</span>
+            <img
+              src={filterLines}
+              alt="filterLines"
+              className="filters-image"
+            />
+            <span className="filters-span">Filters</span>
             {/* <FaFilter />  */}
           </button>
         </div>
@@ -238,6 +244,7 @@ const VendorTable = () => {
                               ? "trend-up"
                               : "trend-down"
                           } showTrend`}
+                          style={{ marginLeft: "30px" }}
                         >
                           <span
                             style={{
@@ -313,10 +320,10 @@ const VendorTable = () => {
       {/* <div style={{ margin: "16px" }}>
         <div
         className="pagination" */}
-          {/* // className={isMobile ? "pagination mobile-pagination" : "pagination"}
+      {/* // className={isMobile ? "pagination mobile-pagination" : "pagination"}
         > */}
-          {/* {isMobile ? ( */}
-            {/* <div className="desktop-nav-button">
+      {/* {isMobile ? ( */}
+      {/* <div className="desktop-nav-button">
               <button className="nav-btn" >
                 <FaArrowLeft />
               </button>
@@ -325,49 +332,50 @@ const VendorTable = () => {
                 <FaArrowRight />
               </button>
             </div> */}
-          {/* ) : ( */}
-            {/* <div className="mobile-nav-button">
+      {/* ) : ( */}
+      {/* <div className="mobile-nav-button">
               <div className="page-info">Page 1 of 10</div>
               <div className="page-buttons ">
                 <button className="nav-btn ">Previous</button>
                 <button className="nav-btn ">Next</button>
               </div>
             </div> */}
-          {/* )} */}
-        {/* </div>
+      {/* )} */}
+      {/* </div>
       </div> */}
+      <div className="row-rule above-footer-buttons"  />
+      <div className="pagination-container">
+        <div className="pagination-desktop">
+          <span
+            className="pagination-text"
+            style={{ fontSize: "14px", fontWeight: "500", color: "#414651" }}
+          >
+            Page 1 of 10
+          </span>
+          <div
+            className="pagination-buttons"
+            style={{ fontSize: "14px", fontWeight: "600", color: "#414651" }}
+          >
+            <button>Previous</button>
+            <button>Next</button>
+          </div>
+        </div>
 
-        <div className="pagination-container">
-      <div className="pagination-desktop">
-        <span className="pagination-text" style={{fontSize:"14px", fontWeight:"500",color:"#414651"}}>
-          Page 1 of 10
-        </span>
-        <div className="pagination-buttons" style={{fontSize:"14px", fontWeight:"600",color:"#414651"}}>
-          <button>
-            Previous
+        <div className="pagination-mobile">
+          <button className="pagination-arrow">
+            <FaArrowLeft />
           </button>
-          <button>
-            Next
+          <span
+            className="pagination-text"
+            style={{ fontSize: "14px", fontWeight: "500", color: "#414651" }}
+          >
+            Page 1 of 10
+          </span>
+          <button className="pagination-arrow">
+            <FaArrowRight />
           </button>
         </div>
       </div>
-
-      <div className="pagination-mobile">
-        <button
-          className="pagination-arrow"
-        >
-          <FaArrowLeft />
-        </button>
-        <span className="pagination-text" style={{fontSize:"14px", fontWeight:"500",color:"#414651"}}>
-          Page 1 of 10
-        </span>
-        <button
-          className="pagination-arrow"
-        >
-          <FaArrowRight />
-        </button>
-      </div>
-    </div>
     </div>
   );
 };

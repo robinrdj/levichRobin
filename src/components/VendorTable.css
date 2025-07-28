@@ -186,8 +186,8 @@
 
 /* Vendor icon image */
 .vendor-icon {
-  width: 28px;
-  height: 28px;
+  width:36px;
+  height: 36px;
   border-radius: 6px;
 }
 
@@ -235,6 +235,8 @@
   border-radius: 4px;
   position: relative;
   cursor: pointer;
+  margin-left: 20px;
+  margin-right: 10px;
 }
 
 /* Checked state for custom checkbox */
@@ -652,6 +654,7 @@ tr.row-divider {
     background: white;
     border-radius: 2px;
     transform: rotate(180deg);
+
   }
   .showTrend {
     display: none;

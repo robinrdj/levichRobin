@@ -37,6 +37,7 @@
   margin: 0px;
   margin-top: 4px;
   font-size: 12px;
+  margin-bottom: 10px;
 }
 
 /* Container for header action buttons */
@@ -186,7 +187,7 @@
 
 /* Vendor icon image */
 .vendor-icon {
-  width:36px;
+  width: 36px;
   height: 36px;
   border-radius: 6px;
 }
@@ -350,7 +351,7 @@
   font-weight: 500;
   padding: 2px 4px;
   border-radius: 4px;
-  margin-left:0px;
+  margin-left: 0px;
   vertical-align: middle;
   border: 1px solid rgb(193, 193, 193);
   color: #414651;
@@ -654,7 +655,6 @@ tr.row-divider {
     background: white;
     border-radius: 2px;
     transform: rotate(180deg);
-
   }
   .showTrend {
     display: none;
@@ -690,5 +690,9 @@ tr.row-divider {
   }
   .above-footer-buttons {
     display: block;
+  }
+
+  .action-header p {
+    margin-bottom: 16px;
   }
 }

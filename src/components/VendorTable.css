@@ -118,6 +118,7 @@
   gap: 0;
   box-shadow: 0px -2px 0px 0px #0a0d120d inset;
   height: 34px;
+  /* border: 1px solid var(--Colors-Border-border-primary, #d5d7da); */
 }
 
 /* Individual view button */
@@ -132,7 +133,7 @@
   position: relative;
   z-index: 1;
   font-weight: 500;
-  border: 1px solid gray;
+  border: 1px solid #d5d7da;
 }
 
 /* Remove double borders between buttons */
@@ -152,7 +153,6 @@
 
 /* Active button styling */
 .view-btn.active {
-  background: #eee;
   font-weight: 500;
   z-index: 2;
 }
@@ -542,10 +542,10 @@ tr.row-divider {
   cursor: not-allowed;
 }
 
-.filters-image{
+.filters-image {
   display: none;
 }
-.filters-span{
+.filters-span {
   display: block;
 }
 
@@ -661,11 +661,10 @@ tr.row-divider {
     display: flex;
   }
 
-  .filters-image{
-  display: block;
-}
-.filters-span{
-  display: none;
-}
-
+  .filters-image {
+    display: block;
+  }
+  .filters-span {
+    display: none;
+  }
 }

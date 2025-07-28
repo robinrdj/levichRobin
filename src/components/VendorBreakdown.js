@@ -101,21 +101,21 @@ const VendorBreakdown = () => {
               stackId="a"
               fill="#6941C6"
               barSize={barSize}
-              radius={isMobile ? [4, 4, 0, 0] : [0, 0, 0, 0]}
+              radius={isMobile ? [0, 0, 0, 0] : [4, 4, 0, 0]}
             />
             <Bar
               dataKey="medium"
               stackId="a"
               fill="#9E77ED"
               barSize={barSize}
-              radius={isMobile ? [4, 4, 0, 0] : [0, 0, 0, 0]}
+              radius={isMobile ? [0, 0, 0, 0] : [4, 4, 0, 0]}
             />
             <Bar
               dataKey="high"
               stackId="a"
               fill="#E9EAEB"
               barSize={barSize}
-              radius={isMobile ? [8, 8, 0, 0] : [2, 2, 0, 0]}
+              radius={isMobile ? [2, 2, 0, 0] : [8, 8, 0, 0]}
             />
           </BarChart>
         </ResponsiveContainer>

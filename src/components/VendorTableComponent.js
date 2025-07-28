@@ -106,8 +106,6 @@ const vendors = [
   },
 ];
 
-
-
 // Main vendor table component
 const VendorTable = () => {
   const isMobile = useIsMobile();
@@ -158,7 +156,7 @@ const VendorTable = () => {
             </span>
           </div>
           <button className="filter-btn">
-            {isMobile ? <img src={filterLines} alt="filterLines" /> : "Filters"}
+            <img src={filterLines} alt="filterLines"  className="filters-image"/><span className="filters-span">Filters</span>
             {/* <FaFilter />  */}
           </button>
         </div>
@@ -233,33 +231,33 @@ const VendorTable = () => {
                           ></div>
                         </div>
                         <div className="rating-score">{vendor.rating}</div>
-                        {showTrend && (
+                        {/* {showTrend && ( */}
+                        <span
+                          className={`trend-badge ${
+                            vendor.trendNature === "positive"
+                              ? "trend-up"
+                              : "trend-down"
+                          } showTrend`}
+                        >
                           <span
-                            className={`trend-badge ${
-                              vendor.trendNature === "positive"
-                                ? "trend-up"
-                                : "trend-down"
-                            }`}
+                            style={{
+                              display: "flex",
+                              gap: "4px",
+                              alignItems: "center",
+                              padding: "2px",
+                              fontSize: "12px",
+                              fontWeight: "400",
+                            }}
                           >
-                            <span
-                              style={{
-                                display: "flex",
-                                gap: "4px",
-                                alignItems: "center",
-                                padding: "2px",
-                                fontSize: "12px",
-                                fontWeight: "400",
-                              }}
-                            >
-                              {vendor.trendNature === "positive" ? (
-                                <FaArrowUp style={{ color: "#079455" }} />
-                              ) : (
-                                <FaArrowDown style={{ color: "#D92D20" }} />
-                              )}
-                              {vendor.trend}%
-                            </span>
+                            {vendor.trendNature === "positive" ? (
+                              <FaArrowUp style={{ color: "#079455" }} />
+                            ) : (
+                              <FaArrowDown style={{ color: "#D92D20" }} />
+                            )}
+                            {vendor.trend}%
                           </span>
-                        )}
+                        </span>
+                        {/* )} */}
                       </div>
                     </td>
                     <td className="no-wrap">{vendor.lastAccessed}</td>
@@ -312,31 +310,64 @@ const VendorTable = () => {
 
       <hr className="divider" />
       {/* Pagination controls */}
-      <div style={{ margin: "16px" }}>
+      {/* <div style={{ margin: "16px" }}>
         <div
-          className={isMobile ? "pagination mobile-pagination" : "pagination"}
-        >
-          {isMobile ? (
-            <>
-              <button className="nav-btn">
+        className="pagination" */}
+          {/* // className={isMobile ? "pagination mobile-pagination" : "pagination"}
+        > */}
+          {/* {isMobile ? ( */}
+            {/* <div className="desktop-nav-button">
+              <button className="nav-btn" >
                 <FaArrowLeft />
               </button>
-              <div className="page-info">Page 1 of 10</div>
-              <button className="nav-btn" style={{ marginRight: "5px" }}>
+              <div className="page-info ">Page 1 of 10</div>
+              <button className="nav-btn " style={{ marginRight: "5px" }}>
                 <FaArrowRight />
               </button>
-            </>
-          ) : (
-            <>
+            </div> */}
+          {/* ) : ( */}
+            {/* <div className="mobile-nav-button">
               <div className="page-info">Page 1 of 10</div>
-              <div className="page-buttons">
-                <button className="nav-btn">Previous</button>
-                <button className="nav-btn">Next</button>
+              <div className="page-buttons ">
+                <button className="nav-btn ">Previous</button>
+                <button className="nav-btn ">Next</button>
               </div>
-            </>
-          )}
+            </div> */}
+          {/* )} */}
+        {/* </div>
+      </div> */}
+
+        <div className="pagination-container">
+      <div className="pagination-desktop">
+        <span className="pagination-text" style={{fontSize:"14px", fontWeight:"500",color:"#414651"}}>
+          Page 1 of 10
+        </span>
+        <div className="pagination-buttons" style={{fontSize:"14px", fontWeight:"600",color:"#414651"}}>
+          <button>
+            Previous
+          </button>
+          <button>
+            Next
+          </button>
         </div>
       </div>
+
+      <div className="pagination-mobile">
+        <button
+          className="pagination-arrow"
+        >
+          <FaArrowLeft />
+        </button>
+        <span className="pagination-text" style={{fontSize:"14px", fontWeight:"500",color:"#414651"}}>
+          Page 1 of 10
+        </span>
+        <button
+          className="pagination-arrow"
+        >
+          <FaArrowRight />
+        </button>
+      </div>
+    </div>
     </div>
   );
 };

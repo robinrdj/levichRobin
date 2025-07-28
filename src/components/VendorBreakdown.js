@@ -44,6 +44,7 @@ const VendorBreakdown = () => {
           display: "flex",
           flexDirection: "row",
           justifyContent: "flex-start",
+          height:"56px"
         }}
       >
         <div>
@@ -59,7 +60,7 @@ const VendorBreakdown = () => {
 
       {/* Chart section */}
       <div className="vendor-chart">
-        <ResponsiveContainer width="100%" height={250}>
+        <ResponsiveContainer width="100%" height={232}>
           <BarChart data={data}>
             <CartesianGrid strokeDasharray="#e5e7eb" vertical={false} />
             <XAxis
@@ -122,7 +123,7 @@ const VendorBreakdown = () => {
       </div>
       <hr className="vendor-divider" />
       {/* Footer with button */}
-      <div className="vendor-footer">
+      <div className="vendor-footer" style={{height:"73px", marginTop:"0px"}}>
         <button>View full report</button>
       </div>
     </div>

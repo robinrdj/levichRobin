@@ -6,10 +6,9 @@
   border-radius: 12px;
   border: 1px solid var(--Colors-Border-border-secondary, #e9eaeb);
   box-sizing: border-box;
-  height: 432px;
+  height: 422px;
   font-family: "Inter";
   max-width: 400px;
-  height: 480px;
   box-shadow: 0px 1px 2px 0px var(--ColorsEffectsShadowsshadow-xs);
 }
 
@@ -18,10 +17,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 30px;
-  margin-top: 16px;
-  margin-left: 16px;
-  margin-right: 16px;
+  margin: 10px;
 }
 
 /* Menu icon in header */
@@ -35,7 +31,6 @@
 .divider {
   height: 1px;
   background-color: #e5e7eb;
-  margin: 12px 0;
 }
 
 /* Progress bar and growth section */
@@ -44,13 +39,14 @@
   justify-content: flex-start;
   align-items: flex-start;
   margin: 16px;
+  margin-top: 32px;
 }
 
 /* Progress bar wrapper */
 .progress-wrapper {
   width: 100%;
-  max-width: 180px;
-  height: 180px;
+  max-width: 210px;
+  height: 110px;
   overflow: hidden;
   margin: 0 auto;
   display: flex;
@@ -90,6 +86,8 @@
 /* Footer text section */
 .footer-text {
   margin: 16px;
+  margin-top: 38px;
+  margin-bottom: 46px;
 }
 
 /* Card title */
@@ -133,8 +131,8 @@
 .button-wrapper {
   display: flex;
   justify-content: flex-end;
-  margin-top: 12px;
   margin-right: 10px;
+  /* height: 73px; */
 }
 
 /* Upgrade plan button */
@@ -151,8 +149,8 @@
   gap: 6px;
   font-weight: 500;
   box-shadow: 0px -2px 0px 0px #0a0d120d inset;
-  margin-bottom: 0px;
-  margin-top: 8px;
+  margin-bottom: 6px;
+  /* margin-top: 8px; */
 }
 .upgrade-btn:hover {
   background-color: #f3f4f6;

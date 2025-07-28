@@ -21,7 +21,7 @@ const VendorMonitor = () => {
     <div className="card">
       {/* Header section with title and menu icon */}
       <div className="card-header">
-        <div>
+        <div style={{ height: "50px" }}>
           <p className="title">Vendors monitored</p>
           <p className="subtitle">
             You're using {percentUsed}% of available spots.
@@ -59,7 +59,10 @@ const VendorMonitor = () => {
             />
           </span>
 
-          <span className="growth-value" style={{ fontSize: "14px", fontWeight:"500" }}>
+          <span
+            className="growth-value"
+            style={{ fontSize: "14px", fontWeight: "500" }}
+          >
             {growth}%
           </span>
         </div>

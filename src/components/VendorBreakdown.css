@@ -7,7 +7,7 @@
   flex-direction: column;
   width: 100%;
   min-width: 400px;
-  height: 480px;
+  height: 422px;
   border: 1px solid var(--Colors-Border-border-secondary, #e9eaeb);
   box-shadow: 0px 1px 2px 0px var(--ColorsEffectsShadowsshadow-xs);
 }
@@ -18,7 +18,7 @@
   align-items: center;
   gap: 8px;
   margin-bottom: 8px;
-  margin: 16px;
+  margin: 1cap;
 }
 
 /* Vendor logo image */
@@ -46,6 +46,9 @@
   color: #535862;
   font-size: 12px;
   font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Divider line */
@@ -95,5 +98,8 @@
   }
   .vendor-chart {
     height: 250px;
+  }
+  .vendorImage {
+    display: none;
   }
 }
